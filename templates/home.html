@@ -1,54 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Career Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <style>
-    h1{
-      font-size: 40px;
-      font-family: Roboto;
-      font-weight: normal;
-      color: rgb(100,100,100);
-      text-align: center;
-    }
     #banner{
       width: 100%;
       height: 360px;
-      object-fit:cover;
+      object: fit cover;;
     }
-    h2{
-       font-size: 32px;
-      font-family: Roboto;
-      font-weight: normal;
-      color: rgb(100,100,100);
-      text-align: center;
-    }
-    .body-text{
-      font-family: Roboto;
-      font-weight: normal;
-      color: rgb(80,80,80);
-    }
-    #container{
-      max-width: 720px;
-      margin: 0 auto 0 auto;
-    }
-    #button{
-      text-align:center;
-    }
-    
   </style>
+  <title>Career Website</title>
+  
 </head>
 <body>
-  <div id=container>
-  <h1>Arsh Media Careers</h1>
-  <img id="banner" src="https://career-website--arshpreetsing29.repl.co/static/Banner.jpg">
-  <h2> About Arsh Media</h2>
-  <p class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis ultricies lacus sed turpis tincidunt id aliquet risus feugiat. Est sit amet facilisis magna etiam tempor. Pulvinar elementum integer enim neque. Nec ultrices dui sapien eget. Sit amet luctus venenatis lectus magna fringilla. Consequat ac felis donec et odio pellentesque. Non odio euismod lacinia at. Adipiscing elit ut aliquam purus sit amet. Mi proin sed libero enim sed. Amet tellus cras adipiscing enim eu turpis egestas pretium aenean. Enim facilisis gravida neque convallis a cras semper auctor. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Fusce ut placerat orci nulla pellentesque. Nisi quis eleifend quam adipiscing.
+  <div class="container">
+  <h1 class="text-center mt-2 mb-3">Arsh Media Careers</h1>
+  <img id="banner" class="img-fluid"src="https://career-website--arshpreetsing29.repl.co/static/Banner.jpg">
+  <h2 class="text-center mt-2 mb-3"> About Arsh Media</h2>
+  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis ultricies lacus sed turpis tincidunt id aliquet risus feugiat. Est sit amet facilisis magna etiam tempor. Pulvinar elementum integer enim neque. Nec ultrices dui sapien eget. Sit amet luctus venenatis lectus magna fringilla. Consequat ac felis donec et odio pellentesque. Non odio euismod lacinia at. Adipiscing elit ut aliquam purus sit amet. Mi proin sed libero enim sed. Amet tellus cras adipiscing enim eu turpis egestas pretium aenean. Enim facilisis gravida neque convallis a cras semper auctor. Pulvinar sapien et ligula ullamcorper malesuada proin libero nunc. Fusce ut placerat orci nulla pellentesque. Nisi quis eleifend quam adipiscing.
 </p>
-<h2>Open Positions</h2>
-  <p class=body-text>Todo Show the jobs here</p>
-    <div id=button>
-  <button>Contact US</button>
-      <p>Copyright 2023</p>
+<h2 class="text-center mt-2 mb-3">Open Positions</h2>
+  <div >
+    {% for job in jobs %}
+    {% include 'jobitem.html' %}
+    {% endfor %}
+  </div>
+    <div class="text-center">
+<button type="button" class="btn btn-outline-primary">Contact US</button>
+      <p class="mt-4">Copyright 2023</p>
   </div>
   </div>
 
